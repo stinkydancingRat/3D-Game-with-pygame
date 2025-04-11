@@ -37,9 +37,6 @@ camera_fov = 90
 viewer_distance = 300
 camera_speed = 15
 
-triangles = []
-#triangles.append(Triangle((0, 0, 0), (100, 0, 0), (0, 0, 100), (255, 255, 255)))
-
 cubes = []
 cube = Rectangle(0, 0, 0, 100, 10, 100, colors)
 cube.create_rectangle()
@@ -90,8 +87,6 @@ while running:
 
     screen.fill((0, 0, 0))
 
-    for triangle in triangles:
-        triangle.draw(screen, camera_x, camera_y, camera_z, w, h, camera_fov, viewer_distance, project_point)
     for cube in cubes:
         for triangle in cube.triangles:
             triangle.draw(screen, camera_x, camera_y, camera_z, w, h, camera_fov, viewer_distance, project_point)
